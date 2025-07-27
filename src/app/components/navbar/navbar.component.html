@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <a href="/" class="logo">YOWDIE</a>
+    </div>
+    
+    <div class="navbar-menu" [class.open]="isMenuOpen">
+      <a *ngFor="let item of menuItems" 
+         [routerLink]="item.url" 
+         class="nav-link p-button p-button-text">
+        {{ item.label }}
+      </a>
+    </div>
+    
+    <p-button 
+      icon="pi pi-bars" 
+      (click)="toggleMenu()" 
+      class="p-button-text p-button-rounded navbar-toggle"
+      [class.hidden]="false">
+    </p-button>
+  </div>
+</nav>

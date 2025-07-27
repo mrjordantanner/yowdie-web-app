@@ -1,0 +1,127 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ff6b35;
+      }
+    }
+  }
+
+  .navbar-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .nav-link {
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      background: transparent !important;
+      border: none !important;
+      padding: 0.5rem 1rem !important;
+
+      &:hover {
+        color: #ff6b35 !important;
+        background: transparent !important;
+        border: none !important;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ff6b35;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+    color: #fff !important;
+    background: transparent !important;
+    border: none !important;
+
+    &:hover {
+      color: #ff6b35 !important;
+      background: transparent !important;
+    }
+  }
+}
+
+// Mobile responsive styles
+@media (max-width: 768px) {
+  .navbar {
+    .navbar-container {
+      padding: 0 1rem;
+    }
+
+    .navbar-menu {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.98);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      padding: 2rem 0;
+      gap: 1.5rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+      &.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 0 !important;
+      }
+    }
+
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+}
