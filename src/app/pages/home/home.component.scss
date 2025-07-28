@@ -21,6 +21,7 @@
   padding: 0;
   position: absolute;
   overflow: hidden !important;
+
 }
 
 .content {
@@ -40,6 +41,12 @@
     max-width: 100vw;
     min-width: 100vw;
     padding: 100px 40px 0 40px;
+  }
+
+  // Leave room at bottom for iPhone navbar
+  @media (max-width: 430px) {
+    height: 90vh;
+    top: -60px;
   }
 }
 
