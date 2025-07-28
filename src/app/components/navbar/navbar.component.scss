@@ -1,5 +1,5 @@
 .navbar {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -7,10 +7,9 @@
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
   .navbar-container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -20,12 +19,13 @@
 
   .navbar-brand {
     .logo {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: #fff;
       text-decoration: none;
       letter-spacing: 2px;
       transition: color 0.3s ease;
+      font-family: 'Inter', sans-serif;
 
       &:hover {
         color: #ff6b35;
