@@ -15,10 +15,10 @@ import { MenuItem } from 'primeng/api';
 export class NavbarComponent {
   isMenuOpen = false;
   menuItems: MenuItem[] = [
-    { label: 'music', url: '/music' },
-    { label: 'merch', url: '/merch' },
-    { label: 'bio', url: '/bio' },
-    { label: 'contact', url: '/contact' }
+    // { label: 'music', url: '/music' },
+    // { label: 'merch', url: '/merch' },
+    // { label: 'bio', url: '/bio' },
+    // { label: 'contact', url: '/contact' }
   ];
 
   toggleMenu(): void {
