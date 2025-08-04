@@ -130,14 +130,15 @@
   max-width: 66vw;
   min-width: 600px;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   gap: 40px;
-  padding: 100px 20px 40px 20px;
+  padding: 0px 20px 40px 20px;
+  top: 100px;
 }
 
 
