@@ -27,6 +27,24 @@
   padding: 0;
   text-transform: lowercase;
   line-height: 1;
+
+  // Tablet Responsive (768px - 1024px)
+  @media (max-width: 1024px) {
+    font-size: 48px;
+  }
+
+  // Mobile Responsive (up to 768px)
+  @media (max-width: 768px) {
+    font-size: 36px;
+    text-align: center;
+    margin-top:40px;
+  }
+
+  // Small Mobile (up to 480px)
+  @media (max-width: 480px) {
+    font-size: 28px;
+    margin-top:40px;
+  }
 }
 
 .bio-page {
@@ -55,12 +73,39 @@
   gap: 25px;
   padding: 80px 20px 20px 20px;
   overflow: hidden;
+
+  // Tablet Responsive (768px - 1024px)
+  @media (max-width: 1024px) {
+    max-width: 80vw;
+    min-width: auto;
+    padding: 80px 40px 40px 40px;
+    gap: 30px;
+    overflow: hidden !important;
+  }
+
+  // Mobile Responsive (up to 768px)
+  @media (max-width: 768px) {
+    max-width: 80vw;
+    min-width: auto;
+    padding: 80px 30px 60px 30px;
+    gap: 30px;
+    margin-top: 20px;
+    overflow: hidden !important;
+  }
+
+  // Small Mobile (up to 480px)
+  @media (max-width: 480px) {
+    max-width: 80vw;
+    padding: 40px 50px 20px 50px;
+    gap: 25px;
+    margin-top: 15px;
+    overflow: hidden !important;
+  }
 }
 
 .bio-content {
   width: 100%;
   max-width: 800px;
-  overflow: hidden !important;
 }
 
 .bio-text {
@@ -72,75 +117,28 @@
   margin: 0 0 24px 0;
   text-align: left;
   letter-spacing: 0.3px;
-}
 
-.bio-text:last-child {
-  margin-bottom: 0;
-}
-
-
-
-// Tablet Responsive (768px - 1024px)
-@media (max-width: 1024px) {
-  .content {
-    max-width: 80vw;
-    min-width: auto;
-    padding: 80px 40px 40px 40px;
-    gap: 30px;
-    overflow: hidden !important;
-  }
-  
-  .bio-header {
-    font-size: 48px;
-  }
-  
-  .bio-text {
+  // Tablet Responsive (768px - 1024px)
+  @media (max-width: 1024px) {
     font-size: 16px;
     line-height: 1.7;
   }
-}
 
-// Mobile Responsive (up to 768px)
-@media (max-width: 768px) {
-  .content {
-    max-width: 80vw;
-    min-width: auto;
-    padding: 80px 30px 60px 30px;
-    gap: 30px;
-    margin-top: 20px;
-    overflow: hidden !important;
-
-  }
-  
-  .bio-header {
-    font-size: 36px;
-    text-align: center;
-  }
-  
-  .bio-text {
+  // Mobile Responsive (up to 768px)
+  @media (max-width: 768px) {
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 20px;
   }
-}
 
-// Small Mobile (up to 480px)
-@media (max-width: 480px) {
-  .content {
-    max-width: 80vw;
-    padding: 70px 50px 50px 50px;
-    gap: 25px;
-    margin-top: 15px;
-    overflow: hidden !important;
-  }
-  
-  .bio-header {
-    font-size: 28px;
-  }
-  
-  .bio-text {
+  // Small Mobile (up to 480px)
+  @media (max-width: 480px) {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 18px;
   }
+}
+
+.bio-text:last-child {
+  margin-bottom: 0;
 } 
