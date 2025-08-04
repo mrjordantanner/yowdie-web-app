@@ -16,13 +16,15 @@
           <!-- Internal links -->
           <a *ngIf="!item.disabled && !item.url.startsWith('mailto:')"
              [routerLink]="item.url"
-             class="nav-link">
+             class="nav-link"
+             (click)="closeMenu()">
             {{ item.label }}
           </a>
           <!-- External links -->
           <a *ngIf="!item.disabled && item.url.startsWith('mailto:')"
              [href]="item.url"
-             class="nav-link">
+             class="nav-link"
+             (click)="closeMenu()">
             {{ item.label }}
           </a>
           <!-- Disabled links -->

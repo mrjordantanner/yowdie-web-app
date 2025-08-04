@@ -152,4 +152,206 @@
     margin: 0;
     line-height: 1;
   }
+}
+
+// Tablet Responsive (768px - 1024px)
+@media (max-width: 1024px) {
+  .release-card {
+    width: 90vw;
+    max-width: 800px;
+    height: 400px;
+    padding: 15px;
+  }
+  
+  .album-section {
+    flex: 0 0 350px;
+    padding: 15px;
+    
+    .album-art {
+      width: 320px;
+      height: 320px;
+      border-width: 6px;
+    }
+  }
+  
+  .content-section {
+    padding: 30px;
+  }
+  
+  .title-section {
+    margin-bottom: 30px;
+    
+    .title {
+      font-size: 48px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+  
+  .platform-section {
+    margin-bottom: 30px;
+    
+    .platform-icons {
+      gap: 14px;
+      
+      .spotify-icon,
+      .apple-music-icon {
+        width: 28px;
+        height: 28px;
+        
+        &::before {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+    
+    .presave-text {
+      font-size: 13px;
+    }
+  }
+  
+  .release-date .date-text {
+    font-size: 28px;
+  }
+}
+
+// Mobile Responsive (up to 768px)
+@media (max-width: 768px) {
+  .release-card {
+    width: 95vw;
+    max-width: 600px;
+    height: auto;
+    min-height: 350px;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .album-section {
+    flex: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    
+    .album-art {
+      width: 200px;
+      height: 200px;
+      border-width: 4px;
+    }
+  }
+  
+  .content-section {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .title-section {
+    margin-bottom: 25px;
+    text-align: center;
+    
+    .title {
+      font-size: 36px;
+    }
+    
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+  
+  .platform-section {
+    margin-bottom: 25px;
+    text-align: center;
+    
+    .platform-icons {
+      justify-content: center;
+      gap: 12px;
+      
+      .spotify-icon,
+      .apple-music-icon {
+        width: 24px;
+        height: 24px;
+        
+        &::before {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+    
+    .presave-text {
+      font-size: 12px;
+    }
+  }
+  
+  .release-date {
+    justify-content: center;
+    
+    .date-text {
+      font-size: 24px;
+    }
+  }
+}
+
+// Small Mobile (up to 480px)
+@media (max-width: 480px) {
+  .release-card {
+    width: 100vw;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .album-section {
+    padding: 10px;
+    margin-bottom: 15px;
+    
+    .album-art {
+      width: 150px;
+      height: 150px;
+      border-width: 3px;
+    }
+  }
+  
+  .content-section {
+    padding: 15px;
+  }
+  
+  .title-section {
+    margin-bottom: 20px;
+    
+    .title {
+      font-size: 28px;
+    }
+    
+    .subtitle {
+      font-size: 12px;
+    }
+  }
+  
+  .platform-section {
+    margin-bottom: 20px;
+    
+    .platform-icons {
+      gap: 10px;
+      
+      .spotify-icon,
+      .apple-music-icon {
+        width: 20px;
+        height: 20px;
+        
+        &::before {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+    
+    .presave-text {
+      font-size: 11px;
+    }
+  }
+  
+  .release-date .date-text {
+    font-size: 20px;
+  }
 } 

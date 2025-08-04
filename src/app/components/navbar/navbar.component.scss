@@ -186,6 +186,7 @@
     padding: 0.5rem;
     flex-direction: column;
     gap: 4px;
+    margin-right: 1rem;
 
     span {
       width: 20px;
@@ -213,36 +214,83 @@
 
     .navbar-menu {
       position: fixed;
-      top: 100%;
+      top: 0;
       left: 0;
       right: 0;
       background: #000;
       flex-direction: column;
       padding: 2rem 0;
       gap: 1.5rem;
-      transform: translateY(-100%);
       opacity: 0;
       visibility: hidden;
-      transition: all 0.3s ease;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1001;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &.open {
-        transform: translateY(0);
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
       }
 
       .nav-link {
         font-size: 1.2rem;
         padding: 0.5rem 0;
+        text-align: center;
+        width: 100%;
+        display: block;
       }
     }
 
     .navbar-toggle {
       display: flex;
+      z-index: 1002;
     }
 
     .profile-section {
       display: none;
+    }
+  }
+}
+
+// Small Mobile (up to 480px)
+@media (max-width: 480px) {
+  .navbar {
+    .navbar-container {
+      padding: 0 0.75rem;
+    }
+
+    .navbar-brand {
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      .social-icons {
+        gap: 0.5rem;
+
+        .spotify-icon,
+        .apple-music-icon {
+          width: 20px;
+          height: 20px;
+
+          &::before {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+
+    .navbar-menu {
+      padding: 1.5rem 0;
+      gap: 1rem;
+
+      .nav-link {
+        font-size: 1.1rem;
+      }
     }
   }
 }
