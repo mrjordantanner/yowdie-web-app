@@ -70,17 +70,17 @@
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-  gap: 25px;
+  gap: 40px;
   padding: 80px 20px 20px 20px;
   overflow: hidden;
 
   // Tablet Responsive (768px - 1024px)
   @media (max-width: 1024px) {
-    max-width: 80vw;
+    max-width:60vw;
     min-width: auto;
-    padding: 80px 40px 40px 40px;
-    gap: 30px;
-    overflow: hidden !important;
+    padding: 60px 40px 40px 40px;
+    //gap: 30px;
+    //overflow: hidden !important;
   }
 
   // Mobile Responsive (up to 768px)
@@ -88,18 +88,16 @@
     max-width: 80vw;
     min-width: auto;
     padding: 80px 30px 60px 30px;
-    gap: 30px;
-    margin-top: 20px;
-    overflow: hidden !important;
+   // gap: 30px;
+   // overflow: hidden !important;
   }
 
   // Small Mobile (up to 480px)
   @media (max-width: 480px) {
     max-width: 80vw;
     padding: 40px 50px 20px 50px;
-    gap: 25px;
-    margin-top: 15px;
-    overflow: hidden !important;
+    //gap: 25px;
+    //overflow: hidden !important;
   }
 }
 

@@ -174,7 +174,7 @@
   
   .subtitle {
     font-family: 'Jost', sans-serif;
-    font-size: clamp(12px, 1.5vw, 18px);
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 400;
     font-style: italic;
     color: #a0a0a0;
@@ -203,6 +203,7 @@
 .platform-section {
   margin-bottom: 40px;
   width: 100%;
+  text-align: right;
 
   // Tablet Responsive (768px - 1024px)
   @media (max-width: 1024px) {
@@ -212,7 +213,7 @@
   // Mobile Responsive (up to 768px)
   @media (max-width: 768px) {
     margin-bottom: 0;
-    text-align: left;
+    text-align: right;
     margin-top: auto;
   }
 
@@ -228,7 +229,9 @@
     gap: clamp(8px, 1.5vw, 16px);
     margin-bottom: 12px;
     flex-wrap: wrap;
-
+    justify-content: flex-end;
+    margin-top: auto;
+   
     // Tablet Responsive (768px - 1024px)
     @media (max-width: 1024px) {
       gap: clamp(6px, 1.3vw, 14px);
@@ -249,8 +252,8 @@
     }
     
     .spotify-icon {
-      width: clamp(20px, 3vw, 32px);
-      height: clamp(20px, 3vw, 32px);
+      width: clamp(30px, 4vw, 60px);
+      height: clamp(30px, 4vw, 60px);
       background: #1DB954;
       border-radius: 50%;
       position: relative;
@@ -299,8 +302,8 @@
     }
     
     .apple-music-icon {
-      width: clamp(20px, 3vw, 32px);
-      height: clamp(20px, 3vw, 32px);
+      width: clamp(30px, 4vw, 60px);
+      height: clamp(30px, 4vw, 60px);
       background: #fa243c;
       border-radius: 50%;
       position: relative;
@@ -351,7 +354,7 @@
   
   .presave-text {
     font-family: 'Jost', sans-serif;
-    font-size: clamp(11px, 1.2vw, 14px);
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 400;
     font-style: italic;
     color: #ffffff;
@@ -391,7 +394,7 @@
   
   .date-text {
     font-family: 'Jost', sans-serif;
-    font-size: clamp(20px, 3.5vw, 36px);
+    font-size: clamp(20px, 4vw, 40px);
     font-weight: 700;
     color: #ffffff;
     margin: 0;
