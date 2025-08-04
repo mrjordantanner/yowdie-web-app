@@ -1,58 +1,124 @@
 .navbar {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
+  background: #000;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Jost', sans-serif;
 
   .navbar-container {
-    margin: 0 auto;
+    margin: 0;
     padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto;
   }
 
   .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
     .logo {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: #fff;
       text-decoration: none;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       transition: color 0.3s ease;
-      font-family: 'Inter', sans-serif;
 
       &:hover {
-        color: #ff6b35;
+        color: #ccc;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+
+      .spotify-icon {
+        width: 24px;
+        height: 24px;
+        background: #1DB954;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+
+        &::before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z'/%3E%3C/svg%3E") no-repeat center;
+          background-size: contain;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .apple-music-icon {
+        width: 24px;
+        height: 24px;
+        background: #FA243C;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+
+        &::before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 3c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 2c2.761 0 5 2.239 5 5s-2.239 5-5 5-5-2.239-5-5 2.239-5 5-5zm0 2c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3z'/%3E%3C/svg%3E") no-repeat center;
+          background-size: contain;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
 
   .navbar-menu {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
 
     .nav-link {
-      color: #fff !important;
+      color: #fff;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
-      transition: all 0.3s ease;
+      text-transform: lowercase;
+      transition: color 0.3s ease;
       position: relative;
-      background: transparent !important;
-      border: none !important;
-      padding: 0.5rem 1rem !important;
+      cursor: pointer;
 
       &:hover {
-        color: #ff6b35 !important;
-        background: transparent !important;
-        border: none !important;
+        color: #ccc;
       }
 
       &::after {
@@ -62,25 +128,74 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #ff6b35;
+        background: #fff;
         transition: width 0.3s ease;
       }
 
       &:hover::after {
         width: 100%;
       }
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: pointer;
+        pointer-events: auto;
+
+        &:hover {
+          color: #fff;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+    
+    .profile-icon {
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      font-size: 1.5rem;
+      color: #fff;
+      border-radius: 50%;
+      padding: 0;
+
+      &:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.1);
+      }
     }
   }
 
   .navbar-toggle {
     display: none;
-    color: #fff !important;
-    background: transparent !important;
-    border: none !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 4px;
 
-    &:hover {
-      color: #ff6b35 !important;
-      background: transparent !important;
+    span {
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transition: all 0.3s ease;
+    }
+
+    &:hover span {
+      background: #ccc;
     }
   }
 }
@@ -92,13 +207,16 @@
       padding: 0 1rem;
     }
 
+    .navbar-right {
+      gap: 1rem;
+    }
+
     .navbar-menu {
       position: fixed;
       top: 100%;
       left: 0;
       right: 0;
-      background: rgba(0, 0, 0, 0.98);
-      backdrop-filter: blur(10px);
+      background: #000;
       flex-direction: column;
       padding: 2rem 0;
       gap: 1.5rem;
@@ -106,7 +224,6 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
 
       &.open {
         transform: translateY(0);
@@ -116,12 +233,16 @@
 
       .nav-link {
         font-size: 1.2rem;
-        padding: 0.5rem 0 !important;
+        padding: 0.5rem 0;
       }
     }
 
     .navbar-toggle {
       display: flex;
+    }
+
+    .profile-section {
+      display: none;
     }
   }
 }

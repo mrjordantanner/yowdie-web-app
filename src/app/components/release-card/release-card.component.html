@@ -1,0 +1,24 @@
+<div class="release-card">
+  <div class="album-section">
+    <img [src]="albumArtPath" [alt]="releaseTitle + ' Album Art'" class="album-art">
+  </div>
+  
+  <div class="content-section">
+    <div class="title-section">
+      <h1 class="title">{{ releaseTitle }}</h1>
+      <p class="subtitle">{{ releaseFormat }}</p>
+    </div>
+    
+    <div class="platform-section">
+      <div class="platform-icons">
+        <a *ngIf="spotifyLink" [href]="spotifyLink" target="_blank" class="spotify-icon"></a>
+        <a *ngIf="appleMusicLink" [href]="appleMusicLink" target="_blank" class="apple-music-icon"></a>
+      </div>
+      <p class="presave-text">presave now!</p>
+    </div>
+    
+    <div class="release-date">
+      <p class="date-text">{{ releaseDate }}</p>
+    </div>
+  </div>
+</div> 

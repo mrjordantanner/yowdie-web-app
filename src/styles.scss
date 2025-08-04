@@ -1,28 +1,29 @@
-// @import '@primeng/themes/lara/base';
-// @import '@primeng/themes/lara/button';
-// @import '@primeng/themes/lara/card';
-// @import '@primeng/themes/lara/image';
 @import 'primeicons/primeicons.css';
 @import 'primeflex/primeflex.css';
 
+// Import Jost font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
 // Global font settings
 * {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-// Prevent ALL scrolling globally
+// Allow vertical scrolling, prevent horizontal scrolling
 html, body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  overflow: hidden !important;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
   height: 100vh !important;
   width: 100vw !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-// Prevent scrolling on Angular root
+// Update Angular root to allow vertical scrolling
 app-root {
-  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
   height: 100vh !important;
   width: 100vw !important;
   display: block !important;

@@ -1,0 +1,155 @@
+.release-card {
+  display: flex;
+  width: 1000px;
+  height: 450px;
+  background: #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-family: 'Jost', sans-serif;
+  padding: 20px;
+}
+
+.album-section {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  
+  .album-art {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border: 8px solid #ffffff;
+  }
+}
+
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  position: relative;
+  background: #2a2a2a;
+}
+
+.title-section {
+  margin-bottom: 40px;
+  
+  .title {
+    font-family: 'Jost', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    line-height: 0.9;
+  }
+  
+  .subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #a0a0a0;
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+.platform-section {
+  margin-bottom: 40px;
+  
+  .platform-icons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+    
+    .spotify-icon {
+      width: 32px;
+      height: 32px;
+      background: #1DB954;
+      border-radius: 50%;
+      position: relative;
+      display: block;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(29, 185, 84, 0.4);
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background: #ffffff;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z'/%3E%3C/svg%3E");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+    
+    .apple-music-icon {
+      width: 32px;
+      height: 32px;
+      background: #fa243c;
+      border-radius: 50%;
+      position: relative;
+      display: block;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(250, 36, 60, 0.4);
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background: #ffffff;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-6h2v2h-2v-2zm0-8h2v6h-2V8z'/%3E%3C/svg%3E");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+  }
+  
+  .presave-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+.release-date {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  
+  .date-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+  }
+} 

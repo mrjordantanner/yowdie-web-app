@@ -1,22 +1,51 @@
 <nav class="navbar">
   <div class="navbar-container">
-    <div class="navbar-brand">
-      <a href="/" class="logo">yowdie</a>
+    <div class="navbar-left">
+      <div class="navbar-brand">
+        <a href="/" class="logo">yowdie</a>
+        <div class="social-icons">
+          <a href="https://open.spotify.com/artist/2RVTPV9ZxBGFLfnR2iVTi0" target="_blank" class="spotify-icon" title="Spotify"></a>
+          <a href="https://music.apple.com/us/artist/yowdie/1827714517" target="_blank" class="apple-music-icon" title="Apple Music"></a>
+        </div>
+      </div>
     </div>
     
-    <div class="navbar-menu" [class.open]="isMenuOpen">
-      <a *ngFor="let item of menuItems" 
-         [routerLink]="item.url" 
-         class="nav-link p-button p-button-text">
-        {{ item.label }}
-      </a>
+    <div class="navbar-right">
+      <div class="navbar-menu" [class.open]="isMenuOpen">
+        <ng-container *ngFor="let item of menuItems">
+          <!-- Internal links -->
+          <a *ngIf="!item.disabled && !item.url.startsWith('mailto:')"
+             [routerLink]="item.url"
+             class="nav-link">
+            {{ item.label }}
+          </a>
+          <!-- External links -->
+          <a *ngIf="!item.disabled && item.url.startsWith('mailto:')"
+             [href]="item.url"
+             class="nav-link">
+            {{ item.label }}
+          </a>
+          <!-- Disabled links -->
+          <span *ngIf="item.disabled"
+                class="nav-link disabled"
+                title="coming soon">
+            {{ item.label }}
+          </span>
+        </ng-container>
+      </div>
+      
+      <div class="profile-section">
+        <button class="profile-icon" title="Profile">👤</button>
+      </div>
     </div>
     
-    <p-button 
-      icon="pi pi-bars" 
+    <button 
       (click)="toggleMenu()" 
-      class="p-button-text p-button-rounded navbar-toggle"
+      class="navbar-toggle"
       [class.hidden]="false">
-    </p-button>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </nav>

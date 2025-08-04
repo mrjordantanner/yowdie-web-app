@@ -1,24 +1,45 @@
 <app-navbar></app-navbar>
 <div class="landing-page">
+  <div class="hero-section">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <!-- <div class="hero-avatar">
+        <img src="assets/yowdie-avatar-1.png" alt="yowdie avatar" class="avatar-image">
+      </div> -->
+      <span class="hero-title">yowdie</span>
+      <span class="hero-subtitle">lofi | chillhop | chillwave</span>
+    </div>
+  </div>
+
   <div class="content">
-    <div class="header-section">
-      <h1 class="title">yowdie</h1>
-      <p class="subtitle">lofi | chillwave</p>
-      <p class="subtitle-2">'the world is not ending' dropping October 10th, 2025</p>
-    </div>
-    
-    <div class="album-section">
-          <img
-            src="assets/yowdie-the-world-is-not-ending-album-art.png" 
-            alt="Yowdie - The World Is Not Ending Album Cover" 
-            class="album-cover">
-    </div>
-    
-    <div class="footer-section">
+    <h2 class="upcoming-releases-title">upcoming releases</h2>
+    <div class="horizontal-divider"></div>
+
+    <app-release-card
+        albumArtPath="assets/4ever-single.jpg"
+        releaseTitle="4ever"
+        releaseFormat="single"
+        spotifyLink="https://open.spotify.com/album/1234567890"
+        appleMusicLink="https://music.apple.com/us/album/the-world-is-not-ending/1234567890"
+        releaseDate="August 15th, 2025"
+    ></app-release-card>
+
+    <app-release-card
+      albumArtPath="assets/yowdie-the-world-is-not-ending-album-art.png"
+      releaseTitle="the world is not ending"
+      releaseFormat="album"
+      spotifyLink="https://open.spotify.com/album/1234567890"
+      appleMusicLink="https://music.apple.com/us/album/the-world-is-not-ending/1234567890"
+      releaseDate="October 10th, 2025"
+    ></app-release-card>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
       <p class="footer-text">
-        (c) 2025 Jordan Smith<br>
+        © 2025 yowdie music<br>
         <a href="mailto:jordan&#64;yowdie.com">jordan&#64;yowdie.com</a>
       </p>
     </div>
-  </div>
+  </footer>
 </div>
