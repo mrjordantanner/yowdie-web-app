@@ -20,7 +20,7 @@ export class NavbarComponent {
   menuItems: MenuItem[] = [
     { label: 'releases', url: '/', disabled: false },
     { label: 'merch', url: '/merch', disabled: true },
-    { label: 'bio', url: '/bio', disabled: true },
+    { label: 'bio', url: '/bio', disabled: false },
     { label: 'contact', url: 'mailto:jordan@yowdie.com', disabled: false }
   ];
 
