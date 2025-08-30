@@ -14,7 +14,7 @@
   <div class="content">
     <!-- Upcoming Releases Section -->
     <div *ngIf="upcomingReleases().length > 0">
-      <h2 class="upcoming-releases-title">upcoming</h2>
+      <h2 class="upcoming-releases-title">upcoming releases</h2>
       <div class="horizontal-divider"></div>
       
       <app-release-card
@@ -25,6 +25,8 @@
         [spotifyLink]="release.spotifyLink"
         [appleMusicLink]="release.appleMusicLink"
         [releaseDate]="release.releaseDate"
+        (click)="openModal(release)"
+        class="clickable-release-card"
       ></app-release-card>
     </div>
 
@@ -41,9 +43,19 @@
         [spotifyLink]="release.spotifyLink"
         [appleMusicLink]="release.appleMusicLink"
         [releaseDate]="release.releaseDate"
+        (click)="openModal(release)"
+        class="clickable-release-card"
       ></app-release-card>
     </div>
   </div>
 
   <app-footer></app-footer>
 </div>
+
+<!-- Release Preview Modal -->
+<app-release-preview-modal
+  *ngIf="isModalOpen()"
+  [releaseData]="selectedRelease()"
+  [isOpen]="isModalOpen()"
+  (close)="closeModal()"
+></app-release-preview-modal>

@@ -1,0 +1,26 @@
+<div class="modal-overlay" [class.closing]="isClosing" (click)="closeModal()">
+  <div class="modal-content" [class.closing]="isClosing" (click)="$event.stopPropagation()">
+    <button class="close-button" [class.closing]="isClosing" (click)="closeModal()">
+      <span>×</span>
+    </button>
+    
+    <div class="modal-background" [class.closing]="isClosing" [style.background-image]="'url(' + (releaseData?.canvasPath || '') + ')'"></div>
+    
+    <div class="top-card" *ngIf="releaseData" [class.closing]="isClosing">
+      <div class="album-art-section">
+        <img [src]="releaseData.albumArtPath" [alt]="releaseData.releaseTitle + ' Album Art'" class="album-art">
+      </div>
+      
+      <div class="content-section">
+        <h2 class="release-title">{{ releaseData.releaseTitle }}</h2>
+        
+        <div class="platform-icons">
+          <a *ngIf="releaseData.spotifyLink" [href]="releaseData.spotifyLink" target="_blank" class="spotify-icon"></a>
+          <a *ngIf="releaseData.appleMusicLink" [href]="releaseData.appleMusicLink" target="_blank" class="apple-music-icon"></a>
+        </div>
+        
+        <p class="format-label">{{ releaseData.releaseFormat }}</p>
+      </div>
+    </div>
+  </div>
+</div>

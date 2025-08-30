@@ -118,7 +118,7 @@
     left: 0;
     width: 100%;
     height: calc(100% + 600px);
-    background-image: url('/assets/4ever-single.jpg');
+    background-image: url('/assets/city-lights-single.jpg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -331,6 +331,16 @@
       width: 100%;
       max-width: 900px;
       margin-bottom: 16px;
+      
+      &.clickable-release-card {
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+      }
     }
   }
 }
