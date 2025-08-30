@@ -14,10 +14,11 @@
         <a *ngIf="spotifyLink" [href]="spotifyLink" target="_blank" class="spotify-icon"></a>
         <a *ngIf="appleMusicLink" [href]="appleMusicLink" target="_blank" class="apple-music-icon"></a>
       </div>
-      <p class="presave-text">presave now!</p>
+      <p *ngIf="!isReleased" class="presave-text">presave now!</p>
     </div>
     
     <div class="release-date">
+      <p *ngIf="isReleased" class="released-label">released on:</p>
       <p class="date-text">{{ releaseDate }}</p>
     </div>
   </div>

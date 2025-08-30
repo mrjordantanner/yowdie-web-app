@@ -15,4 +15,10 @@ export class ReleaseCardComponent {
   @Input() spotifyLink: string = '';
   @Input() appleMusicLink: string = '';
   @Input() releaseDate: string = '';
+
+  get isReleased(): boolean {
+    const releaseDate = new Date(this.releaseDate);
+    const today = new Date();
+    return releaseDate <= today;
+  }
 } 

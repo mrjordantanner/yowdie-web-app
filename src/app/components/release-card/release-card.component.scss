@@ -1,6 +1,6 @@
 .release-card {
   display: flex;
-  width: 90vw;
+  width: 100%;
   max-width: 900px;
   min-width: 320px;
   height: 450px;
@@ -9,11 +9,12 @@
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   font-family: 'Jost', sans-serif;
+  margin: 0 auto;
   //padding: 20px;
 
   // Tablet Responsive (768px - 1024px)
   @media (max-width: 1024px) {
-    width: 85vw;
+    width: 100%;
     max-width: 800px;
     height: 400px;
     //padding: 15px;
@@ -21,7 +22,7 @@
 
   // Mobile Responsive (up to 768px)
   @media (max-width: 768px) {
-    width: 85vw;
+    width: 100%;
     max-width: 400px;
     height: auto;
     min-height: 500px;
@@ -32,7 +33,7 @@
 
   // Small Mobile (up to 480px)
   @media (max-width: 480px) {
-    width: 90vw;
+    width: 100%;
     max-width: 350px;
     padding: 12px;
     border-radius: 10px;
@@ -343,11 +344,8 @@
         transform: translate(-50%, -50%);
         width: 50%;
         height: 50%;
-        background: #ffffff;
-        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-1-6h2v2h-2v-2zm0-8h2v6h-2V8z'/%3E%3C/svg%3E");
-        mask-size: contain;
-        mask-repeat: no-repeat;
-        mask-position: center;
+        background: url('https://cdn.brandfetch.io/id_yBTuraI/theme/light/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1715866792263') no-repeat center;
+        background-size: contain;
       }
     }
   }
@@ -383,13 +381,43 @@
 .release-date {
   margin-top: auto;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   width: 100%;
 
   // Mobile Responsive (up to 768px)
   @media (max-width: 768px) {
     justify-content: flex-end;
     margin-top: 15px;
+  }
+  
+  .released-label {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(14px, 1.5vw, 18px);
+    font-weight: 400;
+    font-style: italic;
+    color: #a0a0a0;
+    margin: 0 0 4px 0;
+    line-height: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    // Tablet Responsive (768px - 1024px)
+    @media (max-width: 1024px) {
+      font-size: clamp(12px, 1.2vw, 16px);
+    }
+
+    // Mobile Responsive (up to 768px)
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    // Small Mobile (up to 480px)
+    @media (max-width: 480px) {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
   }
   
   .date-text {
