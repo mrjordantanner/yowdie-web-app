@@ -46,6 +46,15 @@ export class HomeComponent implements OnInit {
       canvasPath: 'assets/yowdie_canvas_city-lights-GIF.gif'
     },
     {
+      albumArtPath: 'assets/all-we-knew-single.jpg',
+      releaseTitle: 'all we knew',
+      releaseFormat: 'single',
+      spotifyLink: 'https://open.spotify.com/artist/2RVTPV9ZxBGFLfnR2iVTi0',
+      appleMusicLink: 'https://music.apple.com/us/artist/yowdie/1827714517',
+      releaseDate: 'September 12, 2025',
+      canvasPath: 'assets/yowdie_canvas_city-lights-GIF.gif'
+    },
+    {
       albumArtPath: 'assets/city-lights-single.jpg',
       releaseTitle: 'city lights',
       releaseFormat: 'single',
@@ -66,8 +75,8 @@ export class HomeComponent implements OnInit {
   ];
 
   private updateReleases(): void {
-    const upcoming = this.releaseData.filter(release => !this.isReleased(release));
-    const released = this.releaseData.filter(release => this.isReleased(release));
+    const upcoming = this.releaseData.filter(release => !this.isReleased(release)).reverse();  // upcoming releases show soonest release first
+    const released = this.releaseData.filter(release => this.isReleased(release));             // past releases show most recent release first
     
     this.upcomingReleases.set(upcoming);
     this.releasedTracks.set(released);
