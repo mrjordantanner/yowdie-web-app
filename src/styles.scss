@@ -18,6 +18,7 @@ html, body {
   width: 100vw !important;
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #000000 !important;
 }
 
 // Update Angular root to allow vertical scrolling
@@ -27,4 +28,5 @@ app-root {
   height: 100vh !important;
   width: 100vw !important;
   display: block !important;
+  background-color: #000000 !important;
 }

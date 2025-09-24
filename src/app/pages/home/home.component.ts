@@ -46,6 +46,15 @@ export class HomeComponent implements OnInit {
       canvasPath: 'assets/yowdie_canvas_city-lights-GIF.gif'
     },
     {
+      albumArtPath: 'assets/even-though-youre-gone-single.jpg',
+      releaseTitle: 'even though you\'re gone',
+      releaseFormat: 'single',
+      spotifyLink: 'https://distrokid.com/hyperfollow/yowdie/even-though-youre-gone',
+      appleMusicLink: 'https://distrokid.com/hyperfollow/yowdie/even-though-youre-gone',
+      releaseDate: 'October 3, 2025',
+      canvasPath: 'assets/even-though-youre-gone-canvas-GIF.gif'
+    },
+    {
       albumArtPath: 'assets/all-we-knew-single.jpg',
       releaseTitle: 'all we knew',
       releaseFormat: 'single',
