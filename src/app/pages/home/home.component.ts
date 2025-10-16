@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
       releaseFormat: 'album',
       spotifyLink: 'https://open.spotify.com/artist/2RVTPV9ZxBGFLfnR2iVTi0',
       appleMusicLink: 'https://music.apple.com/us/artist/yowdie/1827714517',
-      releaseDate: 'October 17, 2025',
+      releaseDate: 'October 31, 2025',
       canvasPath: 'assets/yowdie_canvas_city-lights-GIF.gif'
     },
     {
